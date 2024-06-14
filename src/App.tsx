@@ -13,16 +13,17 @@ function App() {
             password: formData.get('pass')
         };
 
-        console.log(data)
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-expect-error
         const action = e.nativeEvent.submitter?.name;
         if (action === 'signIn') {
             // Обработка данных для входа
+            alert(JSON.stringify(data))
             //если запрос успешен, то
             e.currentTarget.reset()
         } else if (action === 'signUp') {
             // Обработка данных для регистрации
+            alert(JSON.stringify(data))
             //если запрос успешен, то
             e.currentTarget.reset()
         }
