@@ -46,7 +46,7 @@ function App() {
                                 <button onClick={closeHandler} className={'close_button'}></button>
                             </div>
                             <form onSubmit={onSubmit} className={'form'}>
-                                <p>Войти в систему!!</p>
+                                <p>Войти в систему</p>
                                 <input name={'email'} placeholder={'Email/Телефон'}/>
                                 <input name={'pass'} placeholder={'Пароль'}/>
                                 <label> <input name={'check'} type={"checkbox"}/> Запомнить пароль</label>
