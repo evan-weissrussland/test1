@@ -1,0 +1,347 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url('./fonts/Manrope-Medium.eot') format('eot');
+    src: url('./fonts/Manrope-Medium.ttf') format('truetype'),
+    url('./fonts/Manrope-Medium.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('./fonts/Manrope-Regular.eot') format('eot');
+    src: url('./fonts/Manrope-Regular.ttf') format('truetype'),
+    url('./fonts/Manrope-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 17px;
+    font-family: 'Manrope', serif;
+    color: #1F4284;
+    line-height: 1.6;
+}
+
+.wrapper {
+    padding: 36px 40px;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 768px) {
+        padding: 24px;
+    }
+    @media (max-width: 375px) {
+        padding: 14px 24px;
+    }
+}
+
+.main {
+    max-width: 1920px;
+    width: 100%;
+    min-height: 455px;
+    max-height: 455px;
+    margin: 0 auto;
+    display: flex;
+    background: #EBF0FA;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        min-height: 482px;
+        max-height: 586px;
+    }
+    @media (max-width: 375px) {
+        flex-direction: column;
+        max-height: 482px;
+    }
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 24px 0 72px;
+    flex-grow: 1;
+    @media (min-width: 1440px) {
+        min-width: 680px;
+    }
+
+    @media (min-width: 769px) and (max-width: 1440px) {
+        padding-left: calc((100vw - 769px) / (1440 - 769) * (72 - 24) + 24px);
+    }
+
+    @media (max-width: 1439px) {
+        flex: 1 1 50%;
+    }
+    @media (max-width: 768px) {
+        padding:24px ;
+    }
+    @media (max-width: 375px) {
+        padding-bottom:18px ;
+    }
+}
+
+.aside h2 {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 18px;
+    @media (max-width: 1440px) {
+        font-size: 26px;
+    }
+    @media (min-width: 769px) and (max-width: 1440px) {
+        font-size: calc((100vw - 769px) / (1440 - 769) * (30 - 20) + 20px);
+    }
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
+    @media (max-width: 375px) {
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+}
+
+.aside p {
+    color: #727272;
+    margin-bottom: 36px;
+    width: 100%;
+    @media (min-width: 769px) {
+        max-width: 511px;
+    }
+    @media (min-width: 769px) and (max-width: 1440px) {
+        font-size: calc((100vw - 769px) / (1440 - 769) * (17 - 15) + 15px);
+    }
+    @media (max-width: 768px) {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+    @media (max-width: 375px) {
+        font-size: 13px;
+        margin-bottom: 18px;
+    }
+}
+
+.section {
+    background: greenyellow;
+    max-width: 910px;
+    width: 100%;
+    @media (max-width: 1439px) {
+        flex: 1 1 50%;
+    }
+    @media (max-width: 768px) {
+        max-height: 360px;
+        flex: 0 0 auto;
+    }
+    @media (min-width: 376px) and (max-width: 767px) {
+        height: calc((100vw - 376px) / (767 - 376) * (360 - 220) + 220px);
+    }
+    @media (max-width: 375px) {
+        height: 220px;
+    }
+}
+
+.section img {
+    max-width: 910px;
+    width: 100%;
+    height: 455px;
+    object-fit: cover;
+
+    @media (max-width: 1439px) {
+        max-width: 680px;
+    }
+    @media (max-width: 768px) {
+        height: 360px;
+        max-width: 720px;
+    }
+    @media (min-width: 376px) and (max-width: 767px) {
+        height: calc((100vw - 376px) / (767 - 376) * (360 - 220) + 220px);
+    }
+    @media (max-width: 375px) {
+        height: 220px;
+    }
+}
+
+.aside button {
+    all: unset;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 18px;
+    height: 68px;
+    padding-left: 24px;
+    padding-right: 104px;
+    position: relative;
+    color: white;
+    background: #244C98;
+    border-radius: 60px;
+
+    @media (min-width: 769px) and (max-width: 1440px) {
+        font-size: calc((100vw - 769px) / (1440 - 769) * (18 - 15) + 15px);
+        padding-left: calc((100vw - 769px) / (1440 - 769) * (24 - 18) + 18px);
+        padding-right: calc((100vw - 769px) / (1440 - 769) * (104 - 64) + 64px);
+        height: calc((100vw - 769px) / (1440 - 769) * (68 - 56) + 56px);
+    }
+
+    @media (max-width: 768px) {
+        padding-right: 64px;
+    }
+
+    @media (min-width: 376px) and (max-width: 767px) {
+        padding-right: calc(83px - (100vw - 376px) / (767 - 376) * (83 - 64));
+    }
+
+    @media (max-width: 375px) {
+        padding-right: 83px;
+    }
+
+}
+
+.aside button::after {
+    content: '';
+    display: inline-flex;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    top: 12px;
+    bottom: 12px;
+    right: 12px;
+    position: absolute;
+    background: white url(../src/icons/arrow.svg) center no-repeat;
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+
+    .aside button::after {
+        height: calc((100vw - 769px) / (1440 - 769) * (44 - 36) + 36px);
+        width: calc((100vw - 769px) / (1440 - 769) * (44 - 36) + 36px);
+        top: calc((100vw - 769px) / (1440 - 769) * (12 - 10) + 10px);
+        bottom: calc((100vw - 769px) / (1440 - 769) * (12 - 10) + 10px);
+        right: calc((100vw - 769px) / (1440 - 769) * (12 - 10) + 10px);
+    }
+
+}
+
+@media (max-width: 768px) {
+    .aside button {
+        font-size: 15px;
+        padding-left: 18px;
+        height: 56px;
+    }
+    .aside button::after {
+        width: 36px;
+        height: 36px;
+        top: 10px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+.login {
+    height: 575px;
+    max-width: 500px;
+    width: 100%;
+    padding: 24px;
+    background: #F0F4FC;
+}
+
+.close_popup {
+    display: flex;
+    justify-content: flex-end;
+}
+.close_button {
+    all: unset;
+    display:block;
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    background: white url('./icons/close.svg') center no-repeat;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form p {
+    font:bold 24px/1 'Manrope';
+    color: #323232;
+    margin-bottom: 18px;
+}
+
+.form > input {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font:bold 18px/1 'Manrope';
+    color: #1F4284;
+    margin-bottom: 4px;
+    padding: 24px;
+    background: #D7E2F6;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 18px;
+    margin: 24px 0;
+}
+
+label input[type='checkbox'] {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #323232;
+    background: #D7E2F6;
+}
+
+.form .link {
+    all: unset;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 36px;
+    color: #244C98;
+    cursor: pointer;
+}
+
+.form .signIn {
+    all: unset;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.6;
+    padding: 18px 0;
+    text-align: center;
+    background: #244C98;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin-bottom: 4px;
+}
+
+.form .signUp {
+    all: unset;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.6;
+    padding: 18px 0;
+    text-align: center;
+    background: #F0F4FC;
+    color: #244C98;
+    border-radius: 4px;
+    border: 1px solid #244C98;
+    outline: none;
+}
